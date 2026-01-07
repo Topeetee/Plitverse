@@ -1,0 +1,21 @@
+/* JOB PORTAL CARDS */
+
+.job-card {
+  min-width: 100%;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 768px) {
+  .job-card {
+    min-width: calc(50% - 0.75rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .job-card {
+    min-width: calc(33.333% - 1rem);
+  }
+}
