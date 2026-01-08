@@ -2,339 +2,282 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plitverse</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plitverse</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { primary: '#f58220' }
-                }
-            }
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#f58220' }
         }
-    </script>
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="job-portal.css">
+      }
+    }
+  </script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="job-portal.css">
 </head>
 
 <body class="font-sans text-gray-800">
 
-    <!-- TOP BAR -->
-    <div class="hidden md:flex justify-end gap-6 px-6 py-2 text-xs border-b">
-        <span>Call: +971 04 221 6117</span>
-        <span>Email: apply@pioneeroverseas.ae</span>
+  <!-- TOP BAR -->
+  <div class="hidden md:flex justify-end gap-6 px-6 py-2 text-xs border-b">
+    <span>Call: +971 04 221 6117</span>
+    <span>Email: apply@pioneeroverseas.ae</span>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="font-bold text-lg">
+        <i class="fas fa-anchor text-primary"></i> Plitverse
+      </div>
+
+      <!-- DESKTOP NAV (LG ONLY) -->
+      <nav class="hidden lg:flex gap-8 text-sm font-medium">
+        <a href="/" class="hover:text-primary">Home</a>
+        <a href="/about.html" class="hover:text-primary">About</a>
+        <a href="/recuitment.html" class="hover:text-primary">Recruitment</a>
+        <a href="/joportal.html" class="hover:text-primary">Job Portal</a>
+        <a href="./contact.html" class="hover:text-primary">Contact</a>
+      </nav>
+
+      <!-- HAMBURGER (MOBILE + TABLET) -->
+      <button id="mobile-menu-btn" class="lg:hidden text-2xl"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu"
+    class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 lg:hidden">
+    <div class="flex justify-between items-center px-6 py-4 border-b">
+      <span class="font-bold">Plitverse</span>
+      <button id="mobile-menu-close" class="text-xl"><i class="fas fa-times"></i></button>
     </div>
 
-    <!-- NAVBAR -->
-    <header class="sticky top-0 bg-white shadow z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-            <div class="font-bold text-lg">
-                <i class="fas fa-anchor text-primary"></i> Plitverse
-            </div>
-
-            <!-- DESKTOP NAV (LG ONLY) -->
-            <nav class="hidden lg:flex gap-8 text-sm font-medium">
-                <a href="/" class="hover:text-primary">Home</a>
-                <a href="#" class="hover:text-primary">About</a>
-                <a href="#" class="hover:text-primary">Services</a>
-                <a href="#" class="hover:text-primary">Recruitment</a>
-                <a href="#" class="hover:text-primary">Job Portal</a>
-                <a href="./contact.html" class="hover:text-primary">Contact</a>
-            </nav>
-
-            <!-- HAMBURGER (MOBILE + TABLET) -->
-            <button id="mobile-menu-btn" class="lg:hidden text-2xl"><i class="fas fa-bars"></i></button>
-        </div>
-    </header>
-
-    <!-- MOBILE MENU -->
-    <div id="mobile-menu"
-        class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 lg:hidden">
-        <div class="flex justify-between items-center px-6 py-4 border-b">
-            <span class="font-bold">Plitverse</span>
-            <button id="mobile-menu-close" class="text-xl"><i class="fas fa-times"></i></button>
-        </div>
-
-        <nav class="flex flex-col gap-4 px-6 py-6 text-sm font-medium">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Recruitment</a>
-            <a href="#">Nepalese Recruit</a>
-            <a href="#">Job Portal</a>
-            <a href="#">Clients</a>
-            <a href="./contact.html">Contact</a>
-        </nav>
-    </div>
-    <!-- <H1>Contact page under construction...</H1>
+    <nav class="flex flex-col gap-4 px-6 py-6 text-sm font-medium">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/recuitment.html">Recruitment</a>
+      <a href="/joportal.html">Job Portal</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </div>
+  <!-- <H1>Contact page under construction...</H1>
   <a href="/">Go home</a> -->
- <!-- CONTACT SECTION -->
-<section
-  class="relative min-h-[calc(100vh-96px)] flex items-center justify-center bg-cover bg-center py-12 md:py-20"
-  style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216');"
->
-  <!-- Dark Overlay -->
-  <div class="absolute inset-0 bg-black/60"></div>
+  <!-- CONTACT SECTION -->
+  <section class="relative min-h-[calc(100vh-96px)] flex items-center justify-center bg-cover bg-center py-12 md:py-20"
+    style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216');">
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
 
-  <!-- Glass Form Card -->
-  <div
-    class="relative w-full max-w-md mx-4 my- md:my-17  
+    <!-- Glass Form Card -->
+    <div class="relative w-full max-w-md mx-4 my- md:my-17  
            bg-white/15 backdrop-blur-lg border border-white/30
-           rounded-2xl shadow-xl p-6 md:p-8 text-white"
-  >
-    <h2 class="text-center text-lg font-semibold mb-6">
-      Send Us Your Queries
-    </h2>
+           rounded-2xl shadow-xl p-6 md:p-8 text-white">
+      <h2 class="text-center text-lg font-semibold mb-6">
+        Send Us Your Queries
+      </h2>
 
-    <form class="space-y-4">
-      <div>
-        <label class="text-xs text-white/80">Your name</label>
-        <input
-          type="text"
-          class="w-full bg-white/90 text-gray-800 border border-white/40 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-        />
-      </div>
-
-      <div>
-        <label class="text-xs text-white/80">Your email</label>
-        <input
-          type="email"
-          class="w-full bg-white/90 text-gray-800 border border-white/40 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-        />
-      </div>
-
-      <div>
-        <label class="text-xs text-white/80">Subject</label>
-        <input
-          type="text"
-          class="w-full bg-white/90 text-gray-800 border border-white/40 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-        />
-      </div>
-
-      <div>
-        <label class="text-xs text-white/80">Your message (optional)</label>
-        <textarea
-          rows="4"
-          class="w-full bg-white/90 text-gray-800 border border-white/40 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-        ></textarea>
-      </div>
-
-      <button
-        type="submit"
-        class="w-full bg-primary text-white text-sm px-6 py-2 rounded-lg shadow hover:bg-orange-600 transition"
-      >
-        SUBMIT
-      </button>
-    </form>
-  </div>
-</section>
-
-<!-- GET IN TOUCH -->
-<section class="py-16 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-center text-2xl md:text-3xl font-semibold mb-10 text-primary">
-      Get In Touch
-    </h2>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- Call -->
-      <div
-        class="border rounded-xl p-6 text-center shadow-sm hover:shadow-md transition"
-      >
-        <div
-          class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-4"
-        >
-          <i class="fas fa-phone"></i>
+      <form class="space-y-4">
+        <div>
+          <label class="text-xs text-white/80">Your name</label>
+          <input type="text"
+            class="w-full bg-white/90 text-gray-800 border border-white/40 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary" />
         </div>
-        <h4 class="font-semibold mb-1">Call</h4>
-        <p class="text-sm text-gray-500">Speak directly with our team</p>
-        <p class="text-sm mt-2 font-medium">+971 04 221 6117</p>
+
+        <div>
+          <label class="text-xs text-white/80">Your email</label>
+          <input type="email"
+            class="w-full bg-white/90 text-gray-800 border border-white/40 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary" />
+        </div>
+
+        <div>
+          <label class="text-xs text-white/80">Subject</label>
+          <input type="text"
+            class="w-full bg-white/90 text-gray-800 border border-white/40 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary" />
+        </div>
+
+        <div>
+          <label class="text-xs text-white/80">Your message (optional)</label>
+          <textarea rows="4"
+            class="w-full bg-white/90 text-gray-800 border border-white/40 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-primary text-white text-sm px-6 py-2 rounded-lg shadow hover:bg-orange-600 transition">
+          SUBMIT
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- GET IN TOUCH -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <h2 class="text-center text-2xl md:text-3xl font-semibold mb-10 text-primary">
+        Get In Touch
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Call -->
+        <div class="border rounded-xl p-6 text-center shadow-sm hover:shadow-md transition">
+          <div
+            class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-4">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h4 class="font-semibold mb-1">Call</h4>
+          <p class="text-sm text-gray-500">Speak directly with our team</p>
+          <p class="text-sm mt-2 font-medium">+971 04 221 6117</p>
+        </div>
+
+        <!-- Email -->
+        <div class="border rounded-xl p-6 text-center shadow-sm hover:shadow-md transition">
+          <div
+            class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-4">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h4 class="font-semibold mb-1">Email</h4>
+          <p class="text-sm text-gray-500">Send us your inquiry anytime</p>
+          <p class="text-sm mt-2 font-medium break-all">
+            apply@pioneeroverseas.ae
+          </p>
+        </div>
+
+        <!-- Location -->
+        <div class="border rounded-xl p-6 text-center shadow-sm hover:shadow-md transition">
+          <div
+            class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-4">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h4 class="font-semibold mb-1">Location</h4>
+          <p class="text-sm text-gray-500">Visit our office</p>
+          <p class="text-sm mt-2 font-medium">
+            Toronto Building, 203, Bur Dubai, UAE
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-white border-t border-[#E5E7EB]">
+
+
+    <!-- FOOTER MAIN -->
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- LOGO -->
+      <div>
+        <img src="/logo.png" class="h-16 mb-3" />
+        <p class="text-sm text-gray-500">HR Consultancy</p>
       </div>
 
-      <!-- Email -->
-      <div
-        class="border rounded-xl p-6 text-center shadow-sm hover:shadow-md transition"
-      >
-        <div
-          class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-4"
-        >
-          <i class="fas fa-envelope"></i>
-        </div>
-        <h4 class="font-semibold mb-1">Email</h4>
-        <p class="text-sm text-gray-500">Send us your inquiry anytime</p>
-        <p class="text-sm mt-2 font-medium break-all">
-          apply@pioneeroverseas.ae
+      <!-- ABOUT -->
+      <div>
+        <h3 class="text-[#F58220] font-semibold mb-3">About</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Plitverse Solutions is a registered private company (Reg. No. 8856961), incorporated in 2025 after over five
+          years operating as Litresumesplus. Built on People, Leadership, Innovation, and Technology (PLIT), the company
+          delivers tailored consulting solutions that drive sustainable growth.
         </p>
       </div>
 
-      <!-- Location -->
-      <div
-        class="border rounded-xl p-6 text-center shadow-sm hover:shadow-md transition"
-      >
-        <div
-          class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-primary/10 text-primary text-xl mb-4"
-        >
-          <i class="fas fa-map-marker-alt"></i>
-        </div>
-        <h4 class="font-semibold mb-1">Location</h4>
-        <p class="text-sm text-gray-500">Visit our office</p>
-        <p class="text-sm mt-2 font-medium">
-          Toronto Building, 203, Bur Dubai, UAE
-        </p>
+      <!-- CONTACT -->
+      <div>
+        <h3 class="text-[#F58220] font-semibold mb-3">Contact</h3>
+
+        <ul class="text-sm text-gray-600 space-y-3">
+
+          <!-- ADDRESS -->
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-[#F58220] mt-0.5" fill="none" stroke="currentColor" stroke-width="1.8"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 11c1.656 0 3-1.344 3-3S13.656 5 12 5s-3 1.344-3 3 1.344 3 3 3z" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19.5 8c0 7-7.5 13-7.5 13S4.5 15 4.5 8a7.5 7.5 0 1115 0z" />
+            </svg>
+            <span>
+              Toroo Building, 203,<br />
+              Bur Dubai, United Arab Emirates
+            </span>
+          </li>
+
+          <!-- EMAIL 1 -->
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-[#F58220]" fill="none" stroke="currentColor" stroke-width="1.8"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <a href="mailto:apply@pioneeroverseas.ae" class="hover:text-[#F58220] transition">
+              apply@pioneeroverseas.ae
+            </a>
+          </li>
+
+          <!-- EMAIL 2 -->
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-[#F58220]" fill="none" stroke="currentColor" stroke-width="1.8"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <a href="mailto:bd@pioneeroverseas.ae" class="hover:text-[#F58220] transition">
+              bd@pioneeroverseas.ae
+            </a>
+          </li>
+
+          <!-- PHONE 1 -->
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-[#F58220]" fill="none" stroke="currentColor" stroke-width="1.8"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2 5a2 2 0 012-2h3l2 5-3 2a11 11 0 005 5l2-3 5 2v3a2 2 0 01-2 2h-1C8.716 19 2 12.284 2 4V5z" />
+            </svg>
+            <a href="tel:+97142416117" class="hover:text-[#F58220] transition">
+              +971 4 241 6117
+            </a>
+          </li>
+
+          <!-- PHONE 2 -->
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-[#F58220]" fill="none" stroke="currentColor" stroke-width="1.8"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2 5a2 2 0 012-2h3l2 5-3 2a11 11 0 005 5l2-3 5 2v3a2 2 0 01-2 2h-1C8.716 19 2 12.284 2 4V5z" />
+            </svg>
+            <a href="tel:+971507246504" class="hover:text-[#F58220] transition">
+              +971 50 724 6504
+            </a>
+          </li>
+
+        </ul>
       </div>
+
 
     </div>
-  </div>
-</section>
 
+    <!-- BOTTOM BAR -->
+    <div class="border-t border-[#E5E7EB]">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between text-xs text-gray-500 gap-2">
+        <span>Copyright © 2025 Plivert solutions</span>
+        <span>
+          Developed by
+          <span class="text-[#F58220] font-medium">Plitverse</span>
+        </span>
+      </div>
+    </div>
 
-    <footer class="bg-white border-t border-[#E5E7EB]">
-
-        <!-- OUR CLIENTS -->
-        <div class="max-w-7xl mx-auto px-4 py-12">
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-[#F58220] font-semibold text-lg">Our Clients</h2>
-                <a href="#" class="text-sm bg-[#F58220] text-white px-4 py-1.5 rounded hover:opacity-90 transition">
-                    View More »
-                </a>
-            </div>
-
-            <div class="flex items-center justify-center gap-6 flex-wrap md:flex-nowrap">
-                <button class="hidden md:block text-gray-400 text-2xl">‹</button>
-
-                <div class="flex gap-10 items-center flex-wrap justify-center">
-                    <img src="/logos/burgerking.png"
-                        class="h-10 object-contain grayscale hover:grayscale-0 transition" />
-                    <img src="/logos/emaar.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" />
-                    <img src="/logos/dusit.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" />
-                    <img src="/logos/burj.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" />
-                    <img src="/logos/farnec.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" />
-                    <img src="/logos/rasalkhaimah.png"
-                        class="h-10 object-contain grayscale hover:grayscale-0 transition" />
-                </div>
-
-                <button class="hidden md:block text-gray-400 text-2xl">›</button>
-            </div>
-        </div>
-
-        <!-- DIVIDER -->
-        <div class="border-t border-[#E5E7EB]"></div>
-
-        <!-- FOOTER MAIN -->
-        <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-
-            <!-- LOGO -->
-            <div>
-                <img src="/logo.png" class="h-16 mb-3" />
-                <p class="text-sm text-gray-500">HR Consultancy</p>
-            </div>
-
-            <!-- ABOUT -->
-            <div>
-                <h3 class="text-[#F58220] font-semibold mb-3">About</h3>
-                <p class="text-sm text-gray-600 leading-relaxed">
-                    Pioneer Overseas HR Consultancy is a top-end human resources consultancy
-                    primarily based in the UAE. We work towards the enhancement of performance
-                    for businesses and markets.
-                </p>
-            </div>
-
-            <!-- CONTACT -->
-            <div>
-                <h3 class="text-[#F58220] font-semibold mb-3">Contact</h3>
-
-                <ul class="text-sm text-gray-600 space-y-3">
-
-                    <!-- ADDRESS -->
-                    <li class="flex items-start gap-3">
-                        <svg class="w-5 h-5 text-[#F58220] mt-0.5" fill="none" stroke="currentColor" stroke-width="1.8"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 11c1.656 0 3-1.344 3-3S13.656 5 12 5s-3 1.344-3 3 1.344 3 3 3z" />
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M19.5 8c0 7-7.5 13-7.5 13S4.5 15 4.5 8a7.5 7.5 0 1115 0z" />
-                        </svg>
-                        <span>
-                            Toroo Building, 203,<br />
-                            Bur Dubai, United Arab Emirates
-                        </span>
-                    </li>
-
-                    <!-- EMAIL 1 -->
-                    <li class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#F58220]" fill="none" stroke="currentColor" stroke-width="1.8"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <a href="mailto:apply@pioneeroverseas.ae" class="hover:text-[#F58220] transition">
-                            apply@pioneeroverseas.ae
-                        </a>
-                    </li>
-
-                    <!-- EMAIL 2 -->
-                    <li class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#F58220]" fill="none" stroke="currentColor" stroke-width="1.8"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <a href="mailto:bd@pioneeroverseas.ae" class="hover:text-[#F58220] transition">
-                            bd@pioneeroverseas.ae
-                        </a>
-                    </li>
-
-                    <!-- PHONE 1 -->
-                    <li class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#F58220]" fill="none" stroke="currentColor" stroke-width="1.8"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M2 5a2 2 0 012-2h3l2 5-3 2a11 11 0 005 5l2-3 5 2v3a2 2 0 01-2 2h-1C8.716 19 2 12.284 2 4V5z" />
-                        </svg>
-                        <a href="tel:+97142416117" class="hover:text-[#F58220] transition">
-                            +971 4 241 6117
-                        </a>
-                    </li>
-
-                    <!-- PHONE 2 -->
-                    <li class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#F58220]" fill="none" stroke="currentColor" stroke-width="1.8"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M2 5a2 2 0 012-2h3l2 5-3 2a11 11 0 005 5l2-3 5 2v3a2 2 0 01-2 2h-1C8.716 19 2 12.284 2 4V5z" />
-                        </svg>
-                        <a href="tel:+971507246504" class="hover:text-[#F58220] transition">
-                            +971 50 724 6504
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-
-        </div>
-
-        <!-- BOTTOM BAR -->
-        <div class="border-t border-[#E5E7EB]">
-            <div
-                class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between text-xs text-gray-500 gap-2">
-                <span>Copyright © 2022 Pioneer Overseas HR Consultancy</span>
-                <span>
-                    Developed by
-                    <span class="text-[#F58220] font-medium">Aankhijyal</span>
-                </span>
-            </div>
-        </div>
-
-    </footer>
+  </footer>
 </body>
 
 </html>
