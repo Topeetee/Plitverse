@@ -1,7 +1,29 @@
-/* JOB PORTAL CARDS */
+/* 1. GLOBAL RESET & OVERFLOW PREVENTION */
+*, ::before, ::after {
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
 
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. PREVENT BLUR ELEMENTS FROM LEAKING */
+section {
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* This is the most important line for your Hero blurs */
+}
+
+/* 3. JOB CARD WIDTH TWEAK */
+/* We reduce it slightly more to be safe on smaller phones */
 .job-card {
-  min-width: 100%;
+  flex: 0 0 auto; 
+  width: calc(100vw - 48px); /* 48px = 24px padding on each side */
   background: white;
   padding: 1.5rem;
   border-radius: 0.75rem;
@@ -10,12 +32,58 @@
 
 @media (min-width: 768px) {
   .job-card {
-    min-width: calc(50% - 0.75rem);
+    width: calc(50% - 1rem); /* Using rem for cleaner math */
   }
 }
 
 @media (min-width: 1024px) {
   .job-card {
-    min-width: calc(33.333% - 1rem);
+    width: calc(33.333% - 1.5rem);
   }
+}
+#mobile-menu {
+    visibility: hidden; /* Hide it from the browser's layout engine */
+    pointer-events: none;
+}
+
+#mobile-menu.active { /* You'll need to toggle this class in JS */
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+/* Global Navbar Balance */
+header .max-w-7xl {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media (min-width: 768px) {
+  .job-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .job-card {
+    width: calc(33.333% - 20px);
+  }
+}
+
+/* 3. CLEAN SLIDER */
+#job-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

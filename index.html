@@ -5,15 +5,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plitverse</title>
+  <meta name="description"
+    content="Plitverse Solutions Ltd is an HR and recruitment consultancy providing talent acquisition, workforce planning, and staffing solutions for global employers and job seekers.">
+  <meta name="keywords"
+    content="HR consultancy, recruitment agency, staffing solutions, overseas recruitment, workforce planning, Plitverse">
+  <meta name="author" content="Plitverse Solutions Ltd">
+  <meta property="og:title" content="Plitverse Solutions Ltd – HR & Recruitment Consultancy">
+  <meta property="og:description"
+    content="Reliable HR and recruitment solutions connecting skilled professionals with global opportunities.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/logo.png">
+
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { primary: '#f58220',
+          colors: {
+            primary: '#f58220',
             secon: "oklch(44.4% 0.177 26.899)"
-           }
+          },
+          animation: {
+            'slow-bounce': 'bounce 2s infinite'
+          }
         }
       }
     }
@@ -34,24 +49,22 @@
   </div>
 
   <!-- NAVBAR -->
-  <header class="sticky top-0 bg-white shadow z-50">
+  <header class="sticky top-0 bg-white shadow z-50 w-full">
     <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-      <a href="./index.html">
-        <div class="font-bold text-lg">
-          <i class="fas fa-anchor text-primary"></i> Plitverse
-        </div>
+      <a href="./index.html" class="flex items-center">
+        <img src="./plitverse-logo.png" alt="Plitverse Logo" class="h-10 md:h-12 w-auto object-contain" />
       </a>
 
-      <!-- DESKTOP NAV (LG ONLY) -->
       <nav class="hidden lg:flex gap-8 text-sm font-medium">
         <a href="./index.html" class="hover:text-primary">Home</a>
         <a href="./about.html" class="hover:text-primary">About</a>
-        <a href="./joportal.html" class="hover:text-primary">Job Portal</a>
+        <a href="./services.html" class="hover:text-primary">Services</a>
         <a href="./contact.html" class="hover:text-primary">Contact</a>
       </nav>
 
-      <!-- HAMBURGER (MOBILE + TABLET) -->
-      <button id="mobile-menu-btn" class="lg:hidden text-2xl"><i class="fas fa-bars"></i></button>
+      <button id="mobile-menu-btn" class="lg:hidden text-2xl pr-2">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
 
@@ -59,40 +72,45 @@
   <div id="mobile-menu"
     class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 lg:hidden">
     <div class="flex justify-between items-center px-6 py-4 border-b">
-      <span class="font-bold">Plitverse</span>
+      <img src="./plitverse-logo.png" alt="Plitverse Logo" class="h-8 md:h-10 w-auto object-contain" />
       <button id="mobile-menu-close" class="text-xl"><i class="fas fa-times"></i></button>
     </div>
 
     <nav class="flex flex-col gap-4 px-6 py-6 text-sm font-medium">
-      <a href="./index.html">Home</a>
-      <a href="./about.html">About</a>
-      <a href="./joportal.html">Job Portal</a>
-      <a href="./contact.html">Contact</a>
+      <a href="./index.html" class="hover:text-primary py-2 border-b border-gray-50">Home</a>
+      <a href="./about.html" class="hover:text-primary py-2 border-b border-gray-50">About</a>
+      <a href="./services.html" class="hover:text-primary py-2 border-b border-gray-50">Services</a>
+      <a href="./contact.html" class="hover:text-primary py-2">Contact</a>
     </nav>
   </div>
 
   <!-- HERO -->
-  <section class="bg-primary pt-18 md:pt-24 lg:pt-10 text-white">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 py-16 min-h-[70vh] md:min-h-[80vh] items-center">
+  <section
+    class="relative bg-primary pt-10 md:pt-24 lg:pt-10 text-white overflow-hidden w-full bg-[radial-gradient(circle_at_80%_50%,#ff9d4d_0%,#f58220_70%)]">
+    <div
+      class="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 px-6 py-14 md:py-16 min-h-auto md:min-h-[80vh] items-center">
       <div>
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Plitverse Solutions Ltd</h1>
-        <p class="uppercase text-sm mb-4">HR & Tech Consultancy</p>
-        <p class="mb-6 max-w-md">
-          Partnering with organizations to enhance efficiency, develop talent, and drive sustainable growth.
+        <h1 class="text-4xl md:text-5xl font-bold mb-3 md:mb-4">
+          Plitverse Solutions Ltd
+        </h1>
+        <p class="uppercase text-sm mb-3 font-medium tracking-wider">HR & Tech Consultancy</p>
+        <p class="mb-5 max-w-md text-white/90">
+          Delivering professional HR and recruitment solutions that help businesses
+          attract top talent and support individuals in building meaningful careers.
         </p>
-        <a class="bg-white text-secon border-solid border-secon px-6 py-3 rounded inline-block font-semi-bold" href="./contact.html">
+        <a class="bg-white text-primary px-8 py-3 rounded-lg inline-block font-bold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
+          href="./contact.html">
           Contact Us
         </a>
       </div>
 
-      <div class="flex justify-center items-center">
-        <div
-          class="w-36 h-36 md:w-40 md:h-40 rounded-full border-8 border-white flex items-center justify-center text-5xl">
-          <i class="fas fa-anchor text-white text-5xl"></i>
-        </div>
+      <div class="hidden md:flex justify-center items-center">
+        <img src="./plitverseiconn-removebg-preview.png" alt="Plitverse Icon"
+          class="w-36 h-36 md:w-48 md:h-48 object-contain animate-slow-bounce" />
       </div>
     </div>
   </section>
+
 
   <!-- WHY CHOOSE US -->
   <section class="bg-gray-50 py-20">
@@ -102,8 +120,8 @@
           Why Choose <span class="text-primary">Plitverse</span>
         </h2>
         <p class="text-gray-600 text-sm md:text-base">
-          We deliver reliable, transparent, and result-oriented recruitment and consulting solutions tailored to global
-          workforce needs.
+          We provide transparent, ethical, and results-driven HR and recruitment
+          services designed to meet modern workforce demands.
         </p>
       </div>
 
@@ -113,11 +131,13 @@
         <div class="group shadow-md pb-2 rounded">
           <div
             class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-primary/10 text-primary text-3xl transition group-hover:bg-primary group-hover:text-white">
-            <i class="fas fa-smile"></i>
+            <i class="fas fa-handshake"></i>
+
           </div>
           <h4 class="font-semibold text-lg mb-2">Satisfied Clients</h4>
           <p class="text-sm text-gray-500 leading-relaxed px-2">
-            Proven success through consistent delivery and long-term partnerships with global employers.
+            Trusted by employers through consistent delivery, professionalism,
+            and long-term recruitment partnerships.
           </p>
         </div>
 
@@ -125,11 +145,13 @@
         <div class="group shadow-md pb-2 rounded">
           <div
             class="w-16 h-16 mx-auto mb-5 flex items-center justify-center rounded-full bg-primary/10 text-primary text-3xl transition group-hover:bg-primary group-hover:text-white">
-            <i class="fas fa-users"></i>
+            <i class="fas fa-user-tie"></i>
+
           </div>
           <h4 class="font-semibold text-lg mb-2">Dedicated Team</h4>
           <p class="text-sm text-gray-500 leading-relaxed px-2">
-            Experienced professionals focused on ethical recruitment and personalized workforce solutions.
+            A dedicated HR team experienced in ethical recruitment and tailored
+            workforce solutions.
           </p>
         </div>
 
@@ -141,7 +163,8 @@
           </div>
           <h4 class="font-semibold text-lg mb-2">Global Reach</h4>
           <p class="text-sm text-gray-500 leading-relaxed px-2">
-            Strong international network connecting skilled talent with opportunities worldwide.
+            International recruitment expertise connecting skilled professionals
+            with global employment opportunities.
           </p>
         </div>
 
@@ -158,7 +181,8 @@
           We Look for <span class="text-primary">The Finest</span>
         </h2>
         <p class="max-w-xl mb-6">
-          At Plitverse, quality comes first. We focus on creating high-standard opportunities that shape the future.
+          We focus on identifying skilled, reliable, and motivated professionals
+          who meet industry standards and support long-term organizational success.
         </p>
         <a href="#recruit" class="bg-primary px-6 py-3 rounded inline-block">
           Recruitment Fields
@@ -172,11 +196,15 @@
     <div class="max-w-7xl mx-auto grid md:grid-cols-2 px-6 py-14 divide-solid divide-y md:divide-y-0 md:divide-x">
       <div class="md:pr-10">
         <h3 class="text-2xl font-semibold mb-2">Seeking <span class="text-secon">Employment</span></h3>
-        <p class="text-sm">Are you looking for a right job placement and need help with it? <br/>At Plitverse, our team of industry leading experts and professionals will asssist your to find the perfect job oppurtunities</p>
+        <p class="text-sm">Looking for the right job opportunity? Our recruitment specialists
+          support candidates through job matching, screening, and placement
+          to help you secure suitable employment.</p>
       </div>
       <div class="md:pl-10 mt-6 md:mt-0">
         <h3 class="text-2xl font-semibold mb-2">Seeking <span class="text-secon">Employee</span></h3>
-        <p class="text-sm">Plitverse specializes in providing the full range of HR serivces, including employee discovery, interviews, and recruiting, as well as total human resource management.</p>
+        <p class="text-sm">We provide end-to-end HR services including talent sourcing,
+          candidate assessment, interviews, and workforce management
+          for employers across multiple industries.</p>
       </div>
     </div>
   </section>
@@ -187,22 +215,22 @@
       <h2 class="text-center text-3xl font-bold mb-12">We Recruit</h2>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 text-center">
         <div><i class="fas fa-lock text-3xl text-primary"></i>
-          <p>Security</p>
+          <p>Security Services</p>
         </div>
         <div><i class="fa-solid fa-tachograph-digital text-3xl text-primary"></i>
-          <p>Digital and online roles</p>
+          <p>Digital & Administrative Roles</p>
         </div>
         <div><i class="fas fa-hard-hat text-3xl text-primary"></i>
-          <p>Construction</p>
+          <p>Construction & Engineering</p>
         </div>
         <div><i class="fas fa-industry text-3xl text-primary"></i>
-          <p>Industrial</p>
+          <p>Industrial & Technical Roles</p>
         </div>
         <div><i class="fas fa-heart text-3xl text-primary"></i>
-          <p>Health Care</p>
+          <p>Healthcare & Care Support</p>
         </div>
         <div><i class="fas fa-car text-3xl text-primary"></i>
-          <p>Automobile</p>
+          <p>Automotive & Mechanical</p>
         </div>
       </div>
     </div>
@@ -215,10 +243,12 @@
       <div class="max-w-7xl mx-auto px-6 py-24 text-white">
         <h2 class="text-4xl font-bold mb-8">Our <span class="text-primary">Mission</span></h2>
         <p class="max-w-xl mb-6">
-          Build an inspiring, innovative and global company that offers high human resources solutions to consumers qith unbeatable support.
+          To build a trusted global HR consultancy that delivers high-quality
+          recruitment solutions, ethical practices, and exceptional support
+          to both employers and job seekers.
         </p>
         <a href="./contact.html" class="bg-primary px-6 py-3 rounded inline-block font-semi-bold">
-          Apply now
+          Apply Now
         </a>
       </div>
     </div>
@@ -245,50 +275,50 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex justify-between items-center mb-10">
         <h2 class="text-3xl font-bold">Job Portal</h2>
-        <a href="./joportal.html" class="bg-primary text-white px-4 py-2 rounded text-sm">
+        <a href="./services.html" class="bg-primary text-white px-4 py-2 rounded text-sm">
           View More →
         </a>
       </div>
 
       <div class="relative">
-        <div id="job-slider" class="flex gap-6 overflow-hidden scroll-smooth pb-4">
+        <div id="job-slider" class="flex gap-4 w-full max-w-full overflow-x-auto no-scrollbar scroll-smooth pb-4">
 
           <!-- Job Cards with icons -->
-          <div class="job-card text-center">
+          <div class="job-card flex-none text-center">
             <div class="text-primary text-3xl font-bold mb-2">01</div>
             <div class="text-3xl mb-3"><i class="fas fa-user-tie text-primary text-4xl"></i></div>
             <h4 class="font-semibold mb-2">HR Officer</h4>
             <p class="text-sm text-gray-600">Manage recruitment and employee relations.</p>
           </div>
-          <div class="job-card text-center">
+          <div class="job-card flex-none text-center">
             <div class="text-primary text-3xl font-bold mb-2">02</div>
             <div class="text-3xl mb-3"><i class="fa-solid fa-tachograph-digital text-primary text-4xl"></i></div>
             <h4 class="font-semibold mb-2">Digital roles</h4>
             <p class="text-sm text-gray-600">Oversee daily digital operations and basic online tasks.</p>
           </div>
 
-          <div class="job-card text-center">
+          <div class="job-card flex-none text-center">
             <div class="text-primary text-3xl font-bold mb-2">03</div>
             <div class="text-3xl mb-3"><i class="fas fa-hard-hat text-primary text-4xl"></i></div>
             <h4 class="font-semibold mb-2">Site Engineer</h4>
             <p class="text-sm text-gray-600">Oversee construction site operations.</p>
           </div>
 
-          <div class="job-card text-center">
+          <div class="job-card flex-none text-center">
             <div class="text-primary text-3xl font-bold mb-2">04</div>
             <div class="text-3xl mb-3"><i class="fas fa-hotel text-primary text-4xl"></i></div>
             <h4 class="font-semibold mb-2">Hotel Staff</h4>
             <p class="text-sm text-gray-600">Hospitality services and guest relations.</p>
           </div>
 
-          <div class="job-card text-center">
+          <div class="job-card flex-none text-center">
             <div class="text-primary text-3xl font-bold mb-2">05</div>
             <div class="text-3xl mb-3"><i class="fas fa-car text-primary text-4xl"></i></div>
             <h4 class="font-semibold mb-2">Auto Technician</h4>
             <p class="text-sm text-gray-600">Vehicle maintenance and diagnostics.</p>
           </div>
 
-          <div class="job-card text-center">
+          <div class="job-card flex-none text-center">
             <div class="text-primary text-3xl font-bold mb-2">06</div>
             <div class="text-3xl mb-3"><i class="fas fa-heart text-primary text-4xl"></i></div>
             <h4 class="font-semibold mb-2">Care Assistant</h4>
@@ -306,142 +336,29 @@
       </div>
     </div>
   </section>
-  <footer class="bg-white border-t border-[#E5E7EB]">
 
-    <!-- OUR CLIENTS -->
-    <div class="max-w-7xl mx-auto px-4 py-12">
-      <div class="flex items-center justify-between mb-8">
-        <h2 class="text-[#F58220] font-semibold text-lg">Our Clients</h2>
-        <a href="#" class="text-sm bg-[#F58220] text-white px-4 py-1.5 rounded hover:opacity-90 transition">
-          View More »
-        </a>
-      </div>
+  <footer class="bg-white border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
 
-      <div class="flex items-center justify-center gap-6 flex-wrap md:flex-nowrap">
-        <button class="hidden md:block text-gray-400 text-2xl">‹</button>
-
-        <div class="flex gap-10 items-center flex-wrap justify-center">
-          <img src="/logos/burgerking.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" />
-          <img src="/logos/emaar.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" />
-          <img src="/logos/dusit.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" />
-          <img src="/logos/burj.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" />
-          <img src="/logos/farnec.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" />
-          <img src="/logos/rasalkhaimah.png" class="h-10 object-contain grayscale hover:grayscale-0 transition" />
-        </div>
-
-        <button class="hidden md:block text-gray-400 text-2xl">›</button>
-      </div>
-    </div>
-
-    <!-- DIVIDER -->
-    <div class="border-t border-[#E5E7EB]"></div>
-
-    <!-- FOOTER MAIN -->
-    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-
-      <!-- LOGO -->
-      <div>
-        <img src="/logo.png" class="h-16 mb-3" />
-        <p class="text-sm text-gray-500">HR Consultancy</p>
-      </div>
-
-      <!-- ABOUT -->
-      <div>
-        <h3 class="text-[#F58220] font-semibold mb-3">About</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
-          Plitverse Solutions is a registered private company (Reg. No. 8856961), incorporated in 2025 after over five
-          years operating as Litresumesplus. Built on People, Leadership, Innovation, and Technology (PLIT), the company
-          delivers tailored consulting solutions that drive sustainable growth.
+      <!-- LOGO & TAGLINE -->
+      <div class="flex flex-col items-start md:items-start">
+        <img src="./plitverse-icon.png" class="h-16 mb-3" />
+        <p class="text-sm text-gray-500">
+          Professional HR consultancy delivering ethical recruitment
+          and workforce solutions worldwide.
         </p>
       </div>
-
-      <!-- CONTACT -->
-      <div>
-        <h3 class="text-[#F58220] font-semibold mb-3">Contact</h3>
-
-        <ul class="text-sm text-gray-600 space-y-3">
-
-          <!-- ADDRESS -->
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-[#F58220] mt-0.5" fill="none" stroke="currentColor" stroke-width="1.8"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M12 11c1.656 0 3-1.344 3-3S13.656 5 12 5s-3 1.344-3 3 1.344 3 3 3z" />
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M19.5 8c0 7-7.5 13-7.5 13S4.5 15 4.5 8a7.5 7.5 0 1115 0z" />
-            </svg>
-            <span>
-              Toroo Building, 203,<br />
-              Bur Dubai, United Arab Emirates
-            </span>
-          </li>
-
-          <!-- EMAIL 1 -->
-          <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-[#F58220]" fill="none" stroke="currentColor" stroke-width="1.8"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <a href="" class="hover:text-[#F58220] transition">
-              apply@pioneeroverseas.ae
-            </a>
-          </li>
-
-          <!-- EMAIL 2 -->
-          <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-[#F58220]" fill="none" stroke="currentColor" stroke-width="1.8"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <a href="mailto:bd@pioneeroverseas.ae" class="hover:text-[#F58220] transition">
-              bd@pioneeroverseas.ae
-            </a>
-          </li>
-
-          <!-- PHONE 1 -->
-          <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-[#F58220]" fill="none" stroke="currentColor" stroke-width="1.8"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M2 5a2 2 0 012-2h3l2 5-3 2a11 11 0 005 5l2-3 5 2v3a2 2 0 01-2 2h-1C8.716 19 2 12.284 2 4V5z" />
-            </svg>
-            <a href="tel:+97142416117" class="hover:text-[#F58220] transition">
-              +971 4 241 6117
-            </a>
-          </li>
-
-          <!-- PHONE 2 -->
-          <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-[#F58220]" fill="none" stroke="currentColor" stroke-width="1.8"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M2 5a2 2 0 012-2h3l2 5-3 2a11 11 0 005 5l2-3 5 2v3a2 2 0 01-2 2h-1C8.716 19 2 12.284 2 4V5z" />
-            </svg>
-            <a href="tel:+971507246504" class="hover:text-[#F58220] transition">
-              +971 50 724 6504
-            </a>
-          </li>
-
-        </ul>
-      </div>
-
 
     </div>
 
     <!-- BOTTOM BAR -->
-    <div class="border-t border-[#E5E7EB]">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between text-xs text-gray-500 gap-2">
-        <span>Copyright © 2025 Plitverse solutions </span>
-        <span>
-          Developed by
-          <span class="text-[#F58220] font-medium">Plitverse</span>
-        </span>
+    <div class="border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-6 py-4  items-center text-xs text-gray-500 gap-2">
+        <span>Copyright © 2025 Plitverse Solutions</span>
       </div>
     </div>
-
   </footer>
+
 
 
 

@@ -1,47 +1,60 @@
-// Mobile Navigation Toggle for Plitverse (Slide from LEFT)
-// --------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
 
-const menuButton = document.getElementById('mobile-menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-const closeButton = document.getElementById('mobile-menu-close');
+  // --- 1. MOBILE MENU LOGIC ---
+ const mobileMenu = document.getElementById('mobile-menu');
+const menuBtn = document.getElementById('mobile-menu-btn');
+const closeBtn = document.getElementById('mobile-menu-close');
 
-if (menuButton && mobileMenu) {
-  menuButton.addEventListener('click', () => {
-    console.log("hambuger clicked");
-    mobileMenu.classList.remove('-translate-x-full');
-  });
-}
+menuBtn.onclick = () => {
+  mobileMenu.style.visibility = 'visible';
+  mobileMenu.style.pointerEvents = 'auto'; // This enables clicking
+  mobileMenu.classList.remove('-translate-x-full');
+};
 
-if (closeButton && mobileMenu) {
-  closeButton.addEventListener('click', () => {
-    mobileMenu.classList.add('-translate-x-full');
-  });
-}
+closeBtn.onclick = () => {
+  mobileMenu.classList.add('-translate-x-full');
+  mobileMenu.style.pointerEvents = 'none'; // This prevents clicking while hidden
+  setTimeout(() => {
+    mobileMenu.style.visibility = 'hidden';
+  }, 300);
+};
 
-// Close menu when clicking any link
-const mobileLinks = document.querySelectorAll('#mobile-menu a');
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.add('-translate-x-full');
-  });
-});
+  // --- 2. JOB SLIDER LOGIC (For your index.html) ---
+  const jobSlider = document.getElementById("job-slider");
+  const jobNext = document.getElementById("job-next");
+  const jobPrev = document.getElementById("job-prev");
 
+  if (jobSlider && jobNext && jobPrev) {
+    // Logic to calculate how much to scroll based on screen size
+    const getJobScrollAmount = () => {
+      if (window.innerWidth >= 1024) return jobSlider.clientWidth / 3;
+      if (window.innerWidth >= 768) return jobSlider.clientWidth / 2;
+      return jobSlider.clientWidth;
+    };
 
-// JOB SLIDER
-const slider = document.getElementById("job-slider");
-const nextBtn = document.getElementById("job-next");
-const prevBtn = document.getElementById("job-prev");
+    jobNext.onclick = () => {
+      jobSlider.scrollBy({ left: getJobScrollAmount(), behavior: "smooth" });
+    };
 
-function getScrollAmount() {
-  if (window.innerWidth >= 1024) return slider.clientWidth / 3;
-  if (window.innerWidth >= 768) return slider.clientWidth / 2;
-  return slider.clientWidth;
-}
+    jobPrev.onclick = () => {
+      jobSlider.scrollBy({ left: -getJobScrollAmount(), behavior: "smooth" });
+    };
+  }
 
-nextBtn.addEventListener("click", () => {
-  slider.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
-});
+  // --- 3. SERVICES SLIDER LOGIC (For your services.html) ---
+  const servSlider = document.getElementById("services-slider");
+  const servNext = document.getElementById("services-next");
+  const servPrev = document.getElementById("services-prev");
 
-prevBtn.addEventListener("click", () => {
-  slider.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
+  if (servSlider && servNext && servPrev) {
+    const servScrollAmount = 344; // Card width + gap
+
+    servNext.onclick = () => {
+      servSlider.scrollBy({ left: servScrollAmount, behavior: "smooth" });
+    };
+
+    servPrev.onclick = () => {
+      servSlider.scrollBy({ left: -servScrollAmount, behavior: "smooth" });
+    };
+  }
 });

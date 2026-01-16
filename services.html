@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services</title>
+    <meta name="description"
+        content="Plitverse Solutions Ltd is an HR and recruitment consultancy providing talent acquisition, workforce planning, and staffing solutions for global employers and job seekers.">
+    <meta name="keywords"
+        content="HR consultancy, recruitment agency, staffing solutions, overseas recruitment, workforce planning, Plitverse">
+    <meta name="author" content="Plitverse Solutions Ltd">
+    <meta property="og:title" content="Plitverse Solutions Ltd – HR & Recruitment Consultancy">
+    <meta property="og:description"
+        content="Reliable HR and recruitment solutions connecting skilled professionals with global opportunities.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#f58220' }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="job-portal.css">
+</head>
+
+<body>
+    <div class="hidden md:flex justify-end gap-6 px-6 py-2 text-xs border-b">
+        <span class="font-medium">Call: +971 04 221 6117</span>
+        <span class="font-medium">Email: apply@pioneeroverseas.ae</span>
+    </div>
+    <header class="sticky top-0 bg-white shadow z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <a href="./index.html" class="flex items-center">
+                <img src="./plitverse-logo.png" alt="Plitverse Logo" class="h-10 md:h-12 w-auto object-contain" />
+            </a>
+            <!-- DESKTOP NAV (LG ONLY) -->
+            <nav class="hidden lg:flex gap-8 text-sm font-medium">
+                <a href="./index.html" class="hover:text-primary">Home</a>
+                <a href="./about.html" class="hover:text-primary">About</a>
+                <a href="./services.html" class="hover:text-primary">services</a>
+                <a href="./contact.html" class="hover:text-primary">Contact</a>
+            </nav>
+
+            <!-- HAMBURGER (MOBILE + TABLET) -->
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <div id="mobile-menu"
+        class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 lg:hidden">
+        <div class="flex justify-between items-center px-6 py-4 border-b">
+            <img src="./plitverse-logo.png" alt="Plitverse Logo" class="h-8 md:h-10 w-auto object-contain" />
+            <button id="mobile-menu-close" class="text-xl"><i class="fas fa-times"></i></button>
+        </div>
+
+        <nav class="flex flex-col gap-4 px-6 py-6 text-sm font-medium">
+            <a href="./index.html" class="hover:text-primary py-2 border-b border-gray-50">Home</a>
+            <a href="./about.html" class="hover:text-primary py-2 border-b border-gray-50">About</a>
+            <a href="./services.html" class="hover:text-primary py-2 border-b border-gray-50">Services</a>
+            <a href="./contact.html" class="hover:text-primary py-2">Contact</a>
+        </nav>
+    </div>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10">Our HR & Recruitment Services</h2>
+
+            <!-- Slider container -->
+            <div id="services-slider" class="flex gap-6 overflow-x-auto scroll-smooth pb-4 no-scrollbar">
+
+                <!-- ====== Cards (all 9 cards) ====== -->
+                <!-- Card 1 -->
+                <div
+                    class="job-card flex-none w-[320px] transition duration-500 ease-out hover:-translate-y-2 hover:shadow-lg bg-white p-6 rounded-lg">
+                    <div class="text-3xl mb-3 text-center">
+                        <i class="fas fa-user-tie text-primary text-4xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2 text-center">HR Recruitment & Talent Acquisition</h4>
+                    <p class="text-sm text-gray-600 text-center">
+                        Recruitment services to support organizations in hiring qualified and dependable
+                        professionals.
+                    </p>
+                    <p class="text-xs mt-2 text-gray-500 text-center">
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Talent sourcing &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Candidate interviewing &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Workforce planning
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="job-card flex-none w-[320px] transition duration-500 ease-out hover:-translate-y-2 hover:shadow-lg bg-white p-6 rounded-lg">
+                    <div class="text-3xl mb-3 text-center">
+                        <i class="fas fa-briefcase text-primary text-4xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2 text-center">Job Placement Services</h4>
+                    <p class="text-sm text-gray-600 text-center">
+                        Placement support connecting job seekers with suitable employment opportunities.
+                    </p>
+                    <p class="text-xs mt-2 text-gray-500 text-center">
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Career matching &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> CV screening &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Employer coordination
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="job-card flex-none w-[320px] transition duration-500 ease-out hover:-translate-y-2 hover:shadow-lg bg-white p-6 rounded-lg">
+                    <div class="text-3xl mb-3 text-center">
+                        <i class="fas fa-laptop-code text-primary text-4xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2 text-center">Digital & Administrative Recruitment</h4>
+                    <p class="text-sm text-gray-600 text-center">
+                        Recruitment for office, administrative, and entry-level digital positions.
+                    </p>
+                    <p class="text-xs mt-2 text-gray-500 text-center">
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Data entry roles &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Customer support &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Office administration
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="job-card flex-none w-[320px] transition duration-500 ease-out hover:-translate-y-2 hover:shadow-lg bg-white p-6 rounded-lg">
+                    <div class="text-3xl mb-3 text-center">
+                        <i class="fas fa-hard-hat text-primary text-4xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2 text-center">Engineering & Construction Recruitment</h4>
+                    <p class="text-sm text-gray-600 text-center">
+                        Staffing solutions for engineering and construction-based roles.
+                    </p>
+                    <p class="text-xs mt-2 text-gray-500 text-center">
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Site-based roles &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Project staffing &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Safety-compliant candidates
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="job-card flex-none w-[320px] transition duration-500 ease-out hover:-translate-y-2 hover:shadow-lg bg-white p-6 rounded-lg">
+                    <div class="text-3xl mb-3 text-center">
+                        <i class="fas fa-hotel text-primary text-4xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2 text-center">Hospitality Staffing</h4>
+                    <p class="text-sm text-gray-600 text-center">
+                        Recruitment of trained professionals for hospitality and service roles.
+                    </p>
+                    <p class="text-xs mt-2 text-gray-500 text-center">
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Guest service roles &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Front desk staffing &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Housekeeping staff
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="job-card flex-none w-[320px] transition duration-500 ease-out hover:-translate-y-2 hover:shadow-lg bg-white p-6 rounded-lg">
+                    <div class="text-3xl mb-3 text-center">
+                        <i class="fas fa-tools text-primary text-4xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2 text-center">Technical & Skilled Trade Recruitment</h4>
+                    <p class="text-sm text-gray-600 text-center">
+                        Recruitment of qualified technical and trade professionals.
+                    </p>
+                    <p class="text-xs mt-2 text-gray-500 text-center">
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Mechanical trade roles &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Electrical trade roles &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Maintenance staffing
+                    </p>
+                </div>
+
+                <!-- Card 7 -->
+                <div
+                    class="job-card flex-none w-full sm:w-1/2 md:w-1/3 transition duration-500 ease-out hover:-translate-y-2 hover:shadow-lg bg-white p-6 rounded-lg">
+                    <div class="text-3xl mb-3 text-center">
+                        <i class="fas fa-user-nurse text-primary text-4xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2 text-center">Healthcare & Care Support Recruitment</h4>
+                    <p class="text-sm text-gray-600 text-center">
+                        Placement of care assistants and healthcare support staff.
+                    </p>
+                    <p class="text-xs mt-2 text-gray-500 text-center">
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Care support roles &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Patient assistance &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Support staffing
+                    </p>
+                </div>
+
+                <!-- Card 8 -->
+                <div
+                    class="job-card flex-none w-[320px] transition duration-500 ease-out hover:-translate-y-2 hover:shadow-lg bg-white p-6 rounded-lg">
+                    <div class="text-3xl mb-3 text-center">
+                        <i class="fas fa-handshake text-primary text-4xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2 text-center">Employer & Candidate Support</h4>
+                    <p class="text-sm text-gray-600 text-center">
+                        Ongoing recruitment support to ensure successful placements.
+                    </p>
+                    <p class="text-xs mt-2 text-gray-500 text-center">
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Onboarding coordination &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Retention support &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Client relationship support
+                    </p>
+                </div>
+
+                <!-- Card 9 -->
+                <div
+                    class="job-card flex-none w-[320px] transition duration-500 ease-out hover:-translate-y-2 hover:shadow-lg bg-white p-6 rounded-lg">
+                    <div class="text-3xl mb-3 text-center">
+                        <i class="fas fa-users text-primary text-4xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2 text-center">Workforce Planning & Advisory</h4>
+                    <p class="text-sm text-gray-600 text-center">
+                        Advisory services for strategic HR planning and talent optimization.
+                    </p>
+                    <p class="text-xs mt-2 text-gray-500 text-center">
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Workforce analysis &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Strategic planning &nbsp;
+                        <i class="fas fa-check-circle text-primary mr-1"></i> Talent advisory
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Floating Arrow Buttons -->
+            <div class="flex justify-center gap-4 mt-8">
+                <button id="services-prev"
+                    class="px-6 py-3 rounded-full bg-white shadow-md border border-gray-200 hover:bg-primary hover:text-white transition flex items-center justify-center">
+                    <i class="fas fa-arrow-left mr-2"></i> Previous
+                </button>
+                <button id="services-next"
+                    class="px-6 py-3 rounded-full bg-white shadow-md border border-gray-200 hover:bg-primary hover:text-white transition flex items-center justify-center">
+                    Next <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+        <!-- MINI PRODUCTS -->
+        <div class="bg-gray-50 rounded-2xl p-10">
+            <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Mini Products</h3>
+            <div class="flex flex-col md:flex-row justify-center gap-6 text-sm text-gray-700">
+                <span>• Resume / CV Revamp or Building</span>
+                <span>• LinkedIn Profile Optimization</span>
+                <span>• CV & Resume Writing Training</span>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div
+                class="bg-gray-50 rounded-2xl p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-10 shadow-sm">
+
+                <!-- Text Content -->
+                <div class="max-w-xl">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Let’s Build Your Team
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        We help organizations source, place, and manage dependable talent to support
+                        business growth and long-term workforce success.
+                    </p>
+                </div>
+
+                <!-- Action Button -->
+                <div class="flex-shrink-0">
+                    <a href="./contact.html"
+                        class="inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-lg bg-primary hover:bg-primary/90 transition duration-300 shadow-md">
+                        Contact Us
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            <!-- LOGO & TAGLINE -->
+            <div class="flex flex-col items-start md:items-start">
+                <img src="./plitverse-icon.png" class="h-16 mb-3" />
+                <p class="text-sm text-gray-500">
+                    HR Consultancy delivering expert recruitment and staffing solutions.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM BAR -->
+        <div class="border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-6 py-4  items-center text-xs text-gray-500 gap-2">
+                <span>Copyright © 2025 Plitverse Solutions</span>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
